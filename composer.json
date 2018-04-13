@@ -1,0 +1,9 @@
+{
+    "name": "lombakompetensisiswa/lombakompetensisiswa.github.io",
+    "description": "LKS GitHub Website",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "require": {
+        "tightenco/jigsaw": "^1.1"
+    }
+}
