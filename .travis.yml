@@ -1,0 +1,27 @@
+language: php
+php:
+  - 7.2.4
+
+branches:
+  except:
+    - master
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+    - node_modules
+
+install:
+  - composer install
+  - npm install
+
+script: npm run production
+
+deploy:
+  provider: pages
+  local-dir: build_production
+  target-branch: master
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: develop
