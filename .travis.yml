@@ -17,6 +17,8 @@ install:
 
 script: npm run production
 
+before_deploy: cp .travis.yml build_production
+
 deploy:
   provider: pages
   local-dir: build_production
